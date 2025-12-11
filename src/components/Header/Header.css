@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 40px;
+  padding: 32px 0 28px;
+}
+
+.header__user-container {
+  display: flex;
+  gap: 88px;
+  align-items: center;
+}
+
+.header__user-text {
+  gap: 20px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+<<<<<<< HEAD
+  font-weight: 700;
+=======
+>>>>>>> origin/master
+}
+
+.header__logo-container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.header__logo {
+  height: 40px;
+  width: 89px;
+}
+
+.header__add-clothes-btn {
+  border: none;
+  background: none;
+<<<<<<< HEAD
+  font-weight: 700;
+=======
+>>>>>>> origin/master
+}
+
+.header__avatar {
+  height: 40px;
+  width: 40px;
+}
+<<<<<<< HEAD
+
+.header__date-and-location {
+  font-weight: 700;
+}
+=======
+>>>>>>> origin/master

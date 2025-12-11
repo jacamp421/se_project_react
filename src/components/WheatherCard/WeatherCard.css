@@ -1,0 +1,17 @@
+.weatherCard {
+  display: flex;
+  align-items: center;
+}
+
+.weatherCard__temp {
+  position: absolute;
+  font-size: 32px;
+  color: white;
+  margin-left: 16px;
+}
+
+.weatherCard__img {
+  object-fit: contain;
+  object-position: right top;
+  width: 100%;
+}
