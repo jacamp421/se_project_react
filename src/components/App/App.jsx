@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";
 
 import "../App/App.css";
@@ -75,19 +74,6 @@ function App() {
         card={selectedCard}
         handleCloseClick={closeActiveModal}
       />
-=======
-import "../App/App.css";
-import Header from "../Header/Header.jsx";
-import Main from "../Main/Main.jsx";
-
-function App() {
-  return (
-    <div className="page">
-      <div className="page__content">
-        <Header />
-        <Main />
-      </div>
->>>>>>> origin/master
     </div>
   );
 }
