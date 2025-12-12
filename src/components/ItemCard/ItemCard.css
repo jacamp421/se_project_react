@@ -5,6 +5,10 @@
   width: 324px;
 }
 
+.item__container:hover {
+  cursor: pointer;
+}
+
 .item__container-name {
   position: absolute;
   padding: 2px 12px;

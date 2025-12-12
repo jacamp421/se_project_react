@@ -42,6 +42,10 @@
   right: 28px;
 }
 
+.modal__close:hover {
+  cursor: pointer;
+}
+
 .modal__label {
   display: flex;
   flex-direction: column;
@@ -76,6 +80,7 @@
   border-bottom: 1px solid black;
   margin-top: 8px;
   padding: 0 0 4px;
+  outline: none;
 }
 
 .modal__submit {
@@ -90,6 +95,7 @@
 
 .modal__submit:hover {
   background-color: #00000099;
+  cursor: pointer;
 }
 
 .modal__submit:disabled {

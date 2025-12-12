@@ -1,11 +1,30 @@
 import "./WeatherCard.css";
-import sunCloudy from "../../assets/sun-cloudy.png";
+import { weatherOptions, defaultWeather } from "../../utils/constants";
+function WeatherCard({ weatherData }) {
+  const filteredOptions = weatherOptions.filter((option) => {
+    return (
+      option.day === weatherData.isDay &&
+      option.condition === weatherData.condition
+    );
+  });
 
-function WeatherCard() {
+  let weatherOption;
+  if (filteredOptions.length === 0) {
+    weatherOption = defaultWeather[weatherData.isDay ? "day" : "night"];
+  } else {
+    weatherOption = filteredOptions[0];
+  }
+
   return (
     <div className="weatherCard">
-      <img src={sunCloudy} alt="sunCloudy" className="weatherCard__img" />
-      <p className="weatherCard__temp">50°F</p>
+      <img
+        src={weatherOption?.url}
+        alt={`Card showing ${weatherOption?.day ? "day" : "night"} ${
+          weatherOption?.condition
+        } weather`}
+        className="weatherCard__img"
+      />
+      <p className="weatherCard__temp">{weatherData.temp.F}°</p>
     </div>
   );
 }
