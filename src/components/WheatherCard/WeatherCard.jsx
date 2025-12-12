@@ -1,5 +1,5 @@
 import "./WeatherCard.css";
-import { weatherOptions, defaultWeather } from "../../utils/constants";
+import { weatherOptions, defaultWeather } from "../../utils/constants.js";
 function WeatherCard({ weatherData }) {
   const filteredOptions = weatherOptions.filter((option) => {
     return (

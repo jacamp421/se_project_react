@@ -1,11 +1,10 @@
 import "./Main.css";
 import WeatherCard from "../WheatherCard/WeatherCard.jsx";
 import ItemCard from "../ItemCard/ItemCard.jsx";
-import { defaultClothingItems } from "../../utils/constants.js";
 
-function Main({ weatherData, handleCardClick }) {
+function Main({ weatherData, handleCardClick, defaultClothingItems }) {
   return (
-    <div className="main">
+    <main className="main">
       <WeatherCard weatherData={weatherData} />
       <section className="cards">
         <p className="cards__text">
@@ -27,7 +26,7 @@ function Main({ weatherData, handleCardClick }) {
             })}
         </ul>
       </section>
-    </div>
+    </main>
   );
 }
 
