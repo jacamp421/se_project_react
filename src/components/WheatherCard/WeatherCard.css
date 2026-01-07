@@ -5,9 +5,19 @@
 
 .weatherCard__temp {
   position: absolute;
-  font-size: 32px;
+  font-size: 36px;
   color: white;
   margin-left: 16px;
+  font-weight: 700;
+}
+
+.weatherCard__deg {
+  font-weight: 200;
+  font-size: 0.7em;
+  vertical-align: super;
+  line-height: 1;
+  position: relative;
+  top: 0.2em;
 }
 
 .weatherCard__img {

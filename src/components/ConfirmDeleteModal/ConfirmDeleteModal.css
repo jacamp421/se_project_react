@@ -1,0 +1,39 @@
+.confirm-delete-modal {
+  padding: 20px;
+  width: 670px;
+  height: 280px;
+  text-align: center;
+}
+
+.confirm-delete-modal .modal__title {
+  padding-top: 40px;
+  font-size: 20px;
+}
+
+.confirm-delete-modal .modal__buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  border: none;
+}
+
+.confirm-delete-modal .modal__submit,
+.confirm-delete-modal .modal__cancel-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  display: inline-block;
+  font-size: 20px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.confirm-delete-modal .modal__submit {
+  max-width: none;
+  color: #ff4d00;
+}
