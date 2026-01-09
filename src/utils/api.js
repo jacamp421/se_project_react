@@ -15,7 +15,7 @@ export const addItem = ({ name, link, weather }) => {
       return Promise.reject(`Error: ${res.status}`);
     })
     .catch((err) => {
-      console.warn("No backend yet, fetch failed:", err);
+      console.warn("API call failed:", err);
     });
 };
 

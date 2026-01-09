@@ -23,7 +23,7 @@ function ItemModal({
           />
         </button>
         <div className="pad__cancel">
-          <img src={card.link} alt="Clothing Image" className="modal__image" />
+          <img src={card.link} alt={card.name} className="modal__image" />
         </div>
         <div className="modal__footer">
           <div className="modal__footer-left">

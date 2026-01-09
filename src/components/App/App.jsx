@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "../App/App.css";
-import { coords, apiKey } from "../../utils/constants.js";
+import { coordinates, apiKey } from "../../utils/constants.js";
 import Header from "../Header/Header.jsx";
 import Main from "../Main/Main.jsx";
 import Footer from "../Footer/Footer.jsx";
@@ -45,10 +45,10 @@ function App() {
           setClothingItems((prevItems) =>
             prevItems.filter((item) => item.id !== cardToDelete.id)
           );
+          setCardToDelete(null);
+          setIsDeleteModalOpen(false);
+          setActiveModal("");
         }
-        setCardToDelete(null);
-        setIsDeleteModalOpen(false);
-        setActiveModal(""); // close zoomed-in modal after deletion
       })
       .catch((err) => console.error("Failed to delete item:", err));
   };
@@ -82,7 +82,7 @@ function App() {
   };
 
   useEffect(() => {
-    getWeather(coords, apiKey)
+    getWeather(coordinates, apiKey)
       .then((data) => {
         const filterData = filterWeatherData(data);
         setWeatherData(filterData);
@@ -97,18 +97,6 @@ function App() {
       })
       .catch((err) => console.error("Failed to fetch clothing items:", err));
   }, []);
-
-  const handleDeleteItem = (id) => {
-    deleteItem(id)
-      .then((status) => {
-        if (status === 200) {
-          setClothingItems((prevItems) =>
-            prevItems.filter((item) => item.id !== id)
-          );
-        }
-      })
-      .catch((err) => console.error("Failed to delete item:", err));
-  };
 
   return (
     <CurrentTemperatureUnitContext.Provider

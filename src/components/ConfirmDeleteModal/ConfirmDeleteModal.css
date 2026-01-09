@@ -24,7 +24,6 @@
 .confirm-delete-modal .modal__cancel-button {
   background: none;
   border: none;
-  font-size: 16px;
   cursor: pointer;
   padding: 0;
   display: inline-block;
