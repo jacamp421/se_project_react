@@ -16,7 +16,7 @@ import ConfirmDeleteModal from "../ConfirmDeleteModal/ConfirmDeleteModal.jsx";
 function App() {
   const [weatherData, setWeatherData] = useState({
     type: "",
-    temp: { F: 999, C: 999 },
+    temp: { F: "", C: "" },
     city: "",
     condition: "",
     isDay: false,
@@ -40,15 +40,13 @@ function App() {
   const handleConfirmDelete = () => {
     if (!cardToDelete) return;
     deleteItem(cardToDelete.id)
-      .then((status) => {
-        if (status === 200) {
-          setClothingItems((prevItems) =>
-            prevItems.filter((item) => item.id !== cardToDelete.id)
-          );
-          setCardToDelete(null);
-          setIsDeleteModalOpen(false);
-          setActiveModal("");
-        }
+      .then((deletedItem) => {
+        setClothingItems((prevItems) =>
+          prevItems.filter((item) => item.id !== cardToDelete.id)
+        );
+        setCardToDelete(null);
+        setIsDeleteModalOpen(false);
+        setActiveModal("");
       })
       .catch((err) => console.error("Failed to delete item:", err));
   };
