@@ -46,7 +46,7 @@ function App() {
         );
         setCardToDelete(null);
         setIsDeleteModalOpen(false);
-        setActiveModal("");
+        closeActiveModal();
       })
       .catch((err) => console.error("Failed to delete item:", err));
   };
@@ -67,7 +67,7 @@ function App() {
       weather: inputValues.weatherType,
     })
       .then((data) => {
-        setClothingItems((prevItems) => [...prevItems, data]);
+        setClothingItems((prevItems) => [data, ...prevItems]);
         closeActiveModal();
       })
       .catch((err) => {
